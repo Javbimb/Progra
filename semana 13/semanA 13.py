@@ -9,7 +9,20 @@ class circulo():
     def obt_vol(self):
         return float(self.radio)**3 * 4 *3.14 / 3
     
-circulo1=circulo(7)
-print(circulo1.ob_peri())
-print(circulo1.obt_area())
-print(circulo1.obt_vol())
+
+ncir=int(input("cuantos circulos desea: "))
+listacirculo=[]
+
+for i in range(ncir):
+   circulo1=circulo(float(input("introduzca el radio del circulo numero "+str(i+1)+": ")))
+
+for y in range(ncir):
+  resultado=circulo1.ob_peri()
+  print("del circulo numero "+str(y+1)+":")
+  print(resultado)
+  resultado1= circulo1.obt_area()
+  print("area del circulo numero "+str(y+1)+":")
+  print(resultado1)
+  resultado2= circulo1.obt_vol()
+  print("volumen del circulo numero "+str(y+1)+":")
+  print(resultado2)
